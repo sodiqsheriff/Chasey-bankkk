@@ -19,6 +19,26 @@
         .backdrop {
             transition: opacity 0.3s ease-in-out;
         }
+
+        .carousel-item {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+        }
+        .indicator {
+            height: 10px;
+            width: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        .indicator.active {
+            background-color: blue;
+        }
     </style>
 </head>
 
@@ -26,7 +46,7 @@
 
 
     <nav class="bg-white border-gray-200 h-3">
-        <div class="max-w-full flex flex-wrap items-center justify-between mx-auto px-2 py-5 lg:px-20 lg:py-2">
+        <div class="max-w-full flex flex-wrap items-center justify-between mx-auto px-2 py-5 lg:px-10 lg:py-2">
             <button id="menuButton" type="button"
                 class="md:block lg:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="navbar-default" aria-expanded="false">
@@ -38,7 +58,7 @@
                 </svg>
             </button>
             <img src="newheaderlogo.svg" class="flex justify-center w-32 lg:hidden" alt="">
-            <button type="submit" class="lg:hidden cursor-pointer text-lg font-medium">Sign In</button>
+            <a href="./login.html" type="submit" class="lg:hidden cursor-pointer text-lg font-medium">Sign In</a>
             <div class="hidden w-1/2 h-full lg:block md:w-auto" id="navbar-default">
                 <ul
                     class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
@@ -243,7 +263,7 @@
     </nav>
 
     <div
-        class="bg-[#126bc5] flex flex-col h-full md:flex-row justify-between pt-16 lg:pt-24 pb-16 px-4 lg:px-[6.1rem] ">
+        class="bg-[#126bc5] flex flex-col h-full md:flex-row justify-between pt-16 lg:pt-24 pb-16 px-4 lg:px-16 ">
         <div class="flex  items-center  gap-4 ">
             <img src="enjoy-300-top.png" alt="" class="w-28 md:w-60 md:pt-10 lg:w-full" srcset="">
             <div class="">
@@ -297,81 +317,111 @@
         </form>
     </div>
 
-    <p class="text-center px-4 py-3 font-medium text-xl md:text-5xl lg:font-light"> Choose what's right for you </p>
+    <p class="text-center px-4 py-3 font-medium text-xl md:text-5xl lg:font-extralight"> Choose what's right for you </p>
 
-
-    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="https://www.chase.com/business"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+    <div class="container mx-auto py-10 relative">
+        <div id="carousel" class="carousel-container relative">
+            <div class="carousel-item flex justify-around">
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 1" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 1</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 2" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 2</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 3" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 3</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 4" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 4</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 5" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 5</p>
+                </div>
             </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-2.svg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-3.svg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-4.svg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 5 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-5.svg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <div class="carousel-item flex justify-around">
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 6" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 6</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 7" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 7</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 8" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 8</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 9" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 9</p>
+                </div>
+                <div class="w-1/5 p-4">
+                    <img src="https://via.placeholder.com/150" alt="Image 10" class="w-full h-auto">
+                    <p class="text-center mt-2">Text under Image 10</p>
+                </div>
             </div>
         </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-                data-carousel-slide-to="3"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-                data-carousel-slide-to="4"></button>
+        <div class="absolute top-1/2 transform -translate-y-1/2 left-0">
+            <button id="prev" class="p-2 text-gray-400 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
         </div>
-        <!-- Slider controls -->
-        <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 1 1 5l4 4" />
+        <div class="absolute top-1/2 transform -translate-y-1/2 right-0">
+            <button id="next" class="p-2 text-gray-400 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
+            </button>
+        </div>
+        <div class="flex justify-center mt-4">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
     </div>
+    <script>
+        const carousel = document.getElementById('carousel');
+        const items = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
 
-    <div class="flex flex-col md:flex-row flex-wrap justify-center w-full px-4 h-full gap-5">
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+    </script>
+    <div class="flex flex-col md:flex-row md:flex-wrap justify-center w-full px-4 h-full gap-5 lg:gap-7">
         <img src="./asset/img/pd-lg.jpg" alt="" class="">
         <img src="./asset/img/cs.jpg" alt="" class="">
         <img src="./asset/img/tri-lg.jpg" alt="" class="">
@@ -580,19 +630,19 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row lg:items-center justify-start  gap-3 pt-10 pb-5">
-            <h1 class=" text-lg font-medium mr-3">Other Products & Services: </h1>
-            <ul class="text-left ps-4">
-                <li class='list-disc lg:list-none'><a href=""
+        <div class="flex flex-col md:flex md:flex-row lg:items-center justify-start md:justify-center  gap-3 pt-10 pb-5">
+            <h1 class=" text-lg md:text-sm font-medium md:mr-1 lg:mr-3">Other Products & Services: </h1>
+            <ul class="text-left  ps-4 md:flex md:flex-row md:gap-5">
+                <li class='list-disc md:list-none'><a href=""
                         class="text-blue-700 underline cursor-pointer hover:text-blue-800">Deposit Account
                         Agreements</a></li>
-                <li class='list-disc lg:list-none'><a href=""
+                <li class='list-disc md:list-none'><a href=""
                         class="text-blue-700 underline cursor-pointer hover:text-blue-800">Mobile Banking</a></li>
-                <li class='list-disc lg:list-none'><a href=""
+                <li class='list-disc md:list-none'><a href=""
                         class="text-blue-700 underline cursor-pointer hover:text-blue-800">Online Banking</a></li>
-                <li class='list-disc lg:list-none'><a href=""
+                <li class='list-disc md:list-none'><a href=""
                         class="text-blue-700 underline cursor-pointer hover:text-blue-800">Student Center</a></li>
-                <li class='list-disc lg:list-none'><a href=""
+                <li class='list-disc md:list-none'><a href=""
                         class="text-blue-700 underline cursor-pointer hover:text-blue-800">Zelle®</a></li>
             </ul>
         </div>
@@ -626,7 +676,7 @@
                 and savings, may be subject to approval. Deposit products and related services are offered by JPMorgan
                 Chase Bank, N.A. Member FDIC.</div>
         </div>
-        <div class="grid grid-cols-3 lg:flex flex-wrap flex-row justify-center gap-5 pt-6 text-[11px] text-gray-600">
+        <div class="grid grid-cols-3 mx-auto lg:flex flex-wrap flex-row justify-center gap-5 pt-6 text-[11px] text-gray-600">
             <a href="" class="underline pointer-cursor">About Chase</a>
             <a href="" class="underline pointer-cursor">J.P. Morgan </a>
             <a href="" class="underline pointer-cursor">JPMorgan Chase & Co. </a>
