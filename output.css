@@ -2476,11 +2476,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -3408,11 +3403,6 @@ video {
     margin-right: 1rem;
   }
 
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -3617,11 +3607,6 @@ video {
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  .lg\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   .lg\:px-20 {
